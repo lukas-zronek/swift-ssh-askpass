@@ -9,7 +9,7 @@
 import Foundation
 import Cocoa
 
-let application = NSApplication.shared()
+let application = NSApplication.shared
 NSApp.setActivationPolicy(.accessory)
 NSApp.activate(ignoringOtherApps: true)
 
@@ -22,7 +22,7 @@ let alert = NSAlert()
 alert.window.title = "Enter your passphrase"
 alert.messageText = "SSH Agent"
 alert.informativeText = message
-alert.icon = NSImage(named: NSImageNameCaution)
+alert.icon = NSImage(named: NSImage.Name.caution)
 alert.alertStyle = .warning
 
 let ok = alert.addButton(withTitle: "OK")
@@ -33,7 +33,7 @@ let passwordField = NSSecureTextField(frame: NSRect(x: 0, y: 0, width: 400, heig
 alert.accessoryView = passwordField
 alert.window.initialFirstResponder = passwordField
 
-switch (alert.runModal()) {
+switch (alert.runModal().rawValue) {
 case 1000:
     print(passwordField.stringValue)
 default:
