@@ -33,8 +33,8 @@ let passwordField = NSSecureTextField(frame: NSRect(x: 0, y: 0, width: 400, heig
 alert.accessoryView = passwordField
 alert.window.initialFirstResponder = passwordField
 
-switch (alert.runModal().rawValue) {
-case 1000:
+switch (alert.runModal()) {
+case .alertFirstButtonReturn:
     print(passwordField.stringValue)
 default:
     break
