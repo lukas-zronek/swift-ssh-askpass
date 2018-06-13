@@ -28,7 +28,7 @@ alert.alertStyle = .warning
 let ok = alert.addButton(withTitle: "OK")
 let cancel = alert.addButton(withTitle: "Cancel")
 
-let passwordField = NSSecureTextField(frame: NSRect(x: 0, y: 0, width: 400, height: 24))
+let passwordField = NSSecureTextField(frame: NSRect(x: 0, y: 0, width: 430, height: 24))
 
 alert.accessoryView = passwordField
 alert.window.initialFirstResponder = passwordField
