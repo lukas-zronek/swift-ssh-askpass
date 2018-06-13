@@ -36,6 +36,7 @@ alert.window.initialFirstResponder = passwordField
 switch (alert.runModal()) {
 case .alertFirstButtonReturn:
     print(passwordField.stringValue)
+    exit(0)
 default:
-    break
+    exit(1)
 }
